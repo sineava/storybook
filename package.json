@@ -1,0 +1,40 @@
+{
+  "name": "star",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "driver.js": "^1.3.0",
+    "file-saver": "^2.0.5",
+    "naive-ui": "^2.35.0",
+    "vue": "^3.3.4",
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13",
+    "xlsx-style-vite": "^0.0.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.5.3",
+    "@storybook/addon-interactions": "7.5.3",
+    "@storybook/addon-links": "7.5.3",
+    "@storybook/blocks": "7.5.3",
+    "@storybook/testing-library": "0.2.2",
+    "@storybook/vue3": "7.5.3",
+    "@storybook/vue3-vite": "7.5.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.69.5",
+    "storybook": "7.5.3",
+    "tailwindcss": "^3.3.5",
+    "vite": "^4.4.5"
+  }
+}
