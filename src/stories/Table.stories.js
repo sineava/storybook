@@ -1,11 +1,11 @@
 import Table from './components/table/index.vue'
 
 export default {
-  title: 'table',
+  title: 'wps',
   component: Table
 }
 
-export const generate = {
+export const 表格下载解析 = {
   args: {
     head: { name: '姓名', age: '年龄', address: '住址' },
     data: [

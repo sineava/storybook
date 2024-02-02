@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { exportTable, readExcel } from './tool'
 import { driver } from 'driver.js'
 import 'driver.js/dist/driver.css'
@@ -31,30 +31,32 @@ const parseTable = (e,) => {
     alert(JSON.stringify(arr))
   })
 }
-
-onMounted(() => {
+const guide = () => {
   const driverObj = driver({
     showProgress: true,
     steps: [
-      { element: '.guide-1', popover: { title: '说明书', description: '下载表格' } },
-      { element: '.guide-2', popover: { title: '说明书', description: '解析表格' } },
-      { element: '.guide-3', popover: { title: '说明书', description: '表格数据' } }
+      { element: '.guide-1', popover: { description: '下载表格文件' } },
+      { element: '.guide-2', popover: { description: '解析本地表格并控制台输出' } },
+      { element: '.guide-3', popover: { description: '表格数据' } }
     ],
     prevBtnText: '上一步',
     nextBtnText: '下一步',
     doneBtnText: '完成'
   })
   driverObj.drive()
-})
+}
 </script>
 
 <template>
   <section class="mb-4">
-    <n-button class="guide-1 mr-2" type="primary" @click="generateTable">
+    <n-button class="guide-1 mr-2" type="info" @click="generateTable">
       下载表格
     </n-button>
     <n-button class="guide-2 mr-2" type="info" @click="trigger">
       解析表格
+    </n-button>
+    <n-button class="guide-2" @click="guide">
+      启用引导
     </n-button>
     <input ref="fileRef" type="file" hidden @change="parseTable" />
   </section>
